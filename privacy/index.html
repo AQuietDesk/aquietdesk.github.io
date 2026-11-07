@@ -77,11 +77,13 @@
   <p>To stop sharing, choose <strong>Settings → Google → Disconnect</strong>, which deletes Schedu’s stored Google sign-in from your PC, and remove Schedu at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> to revoke its access on Google’s side. Events and tasks already synced stay in Schedu, and in your Google account, until you delete them.</p>
 
   <h2>4. Schedu Pro</h2>
-  <p>Schedu Pro adds syllabus import. What you import is saved on your PC, and AQuietDesk receives none of it.</p>
+  <div class="box">
+    <p><strong>Everything Schedu Pro saves is stored only on your own computer:</strong> your Anthropic API key, your licence key, the rows read from a syllabus and the items you import. None of it is stored by AQuietDesk or anywhere else by Schedu, and AQuietDesk has no server that could receive it.</p>
+  </div>
   <ul>
-    <li><strong>Your Anthropic API key</strong> is stored in Windows Credential Manager, not in Schedu’s database, so it’s never in your backups. It’s sent only to Anthropic, with each import and when you press Test.</li>
-    <li><strong>Syllabus files</strong> go from your PC straight to Anthropic’s API under your own Anthropic account and its terms (<a href="https://www.anthropic.com/legal/privacy">Anthropic’s privacy policy</a>). Schedu doesn’t keep a copy of the file. It keeps the rows it read until you review them, and the items you approve.</li>
-    <li><strong>Your licence key</strong> and its activation record are stored in Windows Credential Manager. Polar sees the details in the table above so it can limit how many computers a key unlocks. <strong>Settings → Schedu Pro → Remove from this PC</strong> deletes them and frees the slot.</li>
+    <li><strong>Your Anthropic API key</strong> is saved only on this PC, in Windows Credential Manager, set so it never syncs or roams to other computers. It isn’t in Schedu’s database, so it’s never in your backups. It’s sent only to Anthropic, to sign in your own requests (each import, and when you press Test), the same way a password is sent to log in. AQuietDesk never receives it.</li>
+    <li><strong>Syllabus files</strong> go from your PC straight to Anthropic’s API under your own Anthropic account, and Anthropic handles them under its own terms (<a href="https://www.anthropic.com/legal/privacy">Anthropic’s privacy policy</a>). Schedu doesn’t keep a copy of the file. It keeps, on your PC, the rows it read until you review them and the items you approve. Nothing from Google Calendar or Google Tasks is ever sent to Anthropic.</li>
+    <li><strong>Your licence key</strong> and its activation record are saved only on this PC, the same way as the API key. Polar, which issued the key, sees the details in the table above so it can limit how many computers a key unlocks. <strong>Settings → Schedu Pro → Remove from this PC</strong> deletes them from your PC and frees the slot.</li>
     <li>Installing Pro downloads the Pro version from GitHub, like any update.</li>
   </ul>
 
@@ -110,7 +112,7 @@
   <h2>11. Contact</h2>
   <p>AQuietDesk · <a href="mailto:discover@aquietdesk.com">discover@aquietdesk.com</a></p>
 
-  <footer>© 2026 AQuietDesk · <a href="/schedu">Schedu</a></footer>
+  <footer>© 2026 AQuietDesk · <a href="/schedu">Schedu</a> · <a href="/schedu/terms/">Terms</a></footer>
 </div>
 </body>
 </html>
