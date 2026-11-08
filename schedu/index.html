@@ -3,15 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Schedu — a calm planner for classes, tasks and your calendar</title>
+<title>Schedu</title>
+<link rel="canonical" href="https://aquietdesk.com/schedu/">
 <meta name="description" content="Schedu is a desktop planner by AQuietDesk for students and busy people: today view, classes, calendar, quick add, focus timer and optional Google Calendar and Google Tasks sync.">
 <style>
   :root { --bg:#f7f6f2; --card:#fff; --ink:#1d1f1c; --muted:#5d625b; --line:#e3e1da; --accent:#2f5d46; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:760px; margin:0 auto; padding:48px 24px 64px; }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
   header { display:flex; justify-content:space-between; align-items:center; margin-bottom:48px; }
-  header a { color:var(--muted); text-decoration:none; font-size:14px; }
+  header a { color:var(--accent); font-size:15px; }
+  header strong a { color:var(--ink); text-decoration:none; }
+  .card a { color:var(--accent); }
+  a { color:var(--accent); }
   h1 { font-size:40px; line-height:1.15; margin:0 0 12px; letter-spacing:-0.02em; }
   .lede { font-size:19px; color:var(--muted); margin:0 0 28px; }
   .btn { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 22px; border-radius:8px; font-weight:600; }
@@ -28,12 +32,12 @@
 <body>
 <div class="wrap">
   <header>
-    <strong>AQuietDesk</strong>
-    <a href="/privacy">Privacy policy</a>
+    <strong><a href="/">AQuietDesk</a></strong>
+    <a href="/privacy/">Privacy policy</a>
   </header>
 
   <h1>Schedu</h1>
-  <p class="lede">A calm desktop planner that puts your classes, tasks and calendar in one place, so you always know what today needs from you.</p>
+  <p class="lede">Schedu is a calm desktop planner for Windows by AQuietDesk. It puts your classes, tasks and calendar in one place, so you always know what today needs from you.</p>
   <a class="btn" href="https://polar.sh/aquietdesk">Get Schedu</a>
 
   <h2>What Schedu does</h2>
@@ -43,18 +47,24 @@
     <div class="card"><h3>Calendar</h3><p>See your week and month at a glance, with tasks and events side by side.</p></div>
     <div class="card"><h3>Quick add</h3><p>Capture a task or event in a few keystrokes and sort it later.</p></div>
     <div class="card"><h3>Focus timer</h3><p>A built-in work timer to get through one task at a time.</p></div>
-    <div class="card"><h3>Google Calendar &amp; Tasks sync (beta)</h3><p>Optionally connect your Google account to see and add events in your Google Calendar and tasks in Google Tasks.</p></div>
+    <div class="card"><h3>Google Calendar &amp; Tasks sync (beta)</h3><p>Optionally connect your Google account to see your Google Calendar events in Schedu and keep your items in sync with Google Tasks. <a href="#google">Why Schedu asks for this</a>.</p></div>
   </div>
 
-  <h2>How Schedu uses Google data</h2>
-  <p>Google sign-in is optional. If you choose to connect Google, Schedu reads your calendars, events and Google Tasks so it can show them alongside your planner, and creates, updates or deletes events and tasks to keep them in sync with the items you manage in Schedu. This data stays on your computer and is used only to provide these features. It is not sold, shared with advertisers, or used to train AI models. You can disconnect at any time from Schedu's settings or from your <a href="https://myaccount.google.com/permissions">Google account permissions</a>.</p>
-  <p>Full details are in the <a href="/privacy">Schedu privacy policy</a>.</p>
+  <h2 id="google">Why Schedu asks for Google access</h2>
+  <p>Google sign-in is optional, and Schedu works fully without it. If you connect your Google account, Schedu asks for three permissions, each for one feature:</p>
+  <div class="grid">
+    <div class="card"><h3>Google Tasks</h3><p>Schedu puts your planner items in your Google Tasks list and keeps them up to date, so they show on your phone and in Google Calendar. Edits you make there to those same tasks come back to Schedu. Your other Google Tasks are left alone.</p></div>
+    <div class="card"><h3>See your Google Calendar</h3><p>Schedu shows the events from the calendars you pick next to your tasks in its Today and Calendar views, so you can plan around them. It only reads them, and doesn’t save them.</p></div>
+    <div class="card"><h3>Edit Google Calendar events</h3><p>Keeps calendar events that earlier versions of Schedu linked to an item up to date, and deletes them when you delete the item. Schedu doesn’t create new events or change any other event.</p></div>
+  </div>
+  <p style="margin-top:16px">Schedu never asks for your email address or profile. Your Google data goes only between your computer and Google: AQuietDesk never receives it, it’s never sent to Anthropic or any AI service, and it isn’t sold, used for ads, or used to train AI models. <strong>Settings → Google → Disconnect</strong> revokes Schedu’s access and deletes its Google sign-in from your computer. You can also remove it in your <a href="https://myaccount.google.com/permissions">Google account permissions</a>.</p>
+  <p>Full details are in the <a href="/privacy/">Schedu privacy policy</a>.</p>
 
   <h2 id="pro">Schedu Pro: import a syllabus</h2>
   <p>Drop in a PDF or Word syllabus and every assignment, quiz and exam lands in the class, with grade weights and the instructor. You check each row against the syllabus text before anything is added; missing or unusual dates are flagged, never guessed. A whole import can be undone in one click.</p>
   <ul>
     <li><strong>Your own Anthropic API key.</strong> Reading runs on your own Anthropic account, usually a few cents per syllabus, paid to Anthropic directly.</li>
-    <li><strong>Stays on your device.</strong> Your API key, licence key and everything imported are saved only on your computer. Syllabus files go only to Anthropic. AQuietDesk never receives any of it. Google Calendar data is never sent to Anthropic.</li>
+    <li><strong>Stays on your device.</strong> Your API key, licence key and everything imported are saved only on your computer. Syllabus files go only to Anthropic. AQuietDesk never receives any of it. Google data is never sent to Anthropic.</li>
     <li><strong>$4.99 CAD a year, up to 3 computers.</strong> Coming January 2027. Not refundable, so try the preview in the app first. See the <a href="/schedu/terms/#pro">terms</a>.</li>
   </ul>
 
@@ -62,7 +72,7 @@
   <p>Schedu is made by AQuietDesk, a small independent studio building simple tools for planning your life and money. Questions: <a href="mailto:discover@aquietdesk.com">discover@aquietdesk.com</a>.</p>
 
   <footer>
-    © 2026 AQuietDesk · <a href="/privacy">Privacy policy</a> · <a href="/schedu/terms/">Terms</a> · <a href="mailto:discover@aquietdesk.com">Contact</a>
+    © 2026 AQuietDesk · <a href="/privacy/">Privacy policy</a> · <a href="/schedu/terms/">Terms</a> · <a href="mailto:discover@aquietdesk.com">Contact</a>
   </footer>
 </div>
 </body>

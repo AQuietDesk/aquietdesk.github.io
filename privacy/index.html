@@ -3,116 +3,136 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Schedu by AQuietDesk</title>
-<meta name="description" content="How Schedu, the desktop planner by AQuietDesk, collects, uses, stores and protects your information, including Google user data.">
+<title>Schedu Privacy Policy</title>
+<meta name="description" content="How Schedu, the desktop planner by AQuietDesk, handles your information, including Google user data from Google Calendar and Google Tasks.">
+<link rel="canonical" href="https://aquietdesk.com/privacy/">
 <style>
   :root { --bg:#f7f6f2; --ink:#1d1f1c; --muted:#5d625b; --line:#e3e1da; --accent:#2f5d46; }
+  * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  .wrap { max-width:760px; margin:0 auto; padding:48px 24px 64px; }
-  header { display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; }
-  header a, a { color:var(--accent); }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:40px; }
+  header nav a { margin-left:16px; }
+  header strong a { color:var(--ink); text-decoration:none; }
+  a { color:var(--accent); }
   h1 { font-size:34px; margin:0 0 6px; letter-spacing:-0.02em; }
   .meta { color:var(--muted); margin:0 0 32px; }
   h2 { font-size:21px; margin:36px 0 10px; }
-  h3 { font-size:17px; margin:22px 0 6px; }
+  h3 { font-size:17px; margin:24px 0 6px; }
   ul { padding-left:22px; }
   li { margin-bottom:6px; }
+  code { font-size:14px; overflow-wrap:anywhere; }
   table { width:100%; border-collapse:collapse; font-size:15px; margin:12px 0; }
   th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); }
   th { font-weight:600; }
   .scroll { overflow-x:auto; }
   .box { background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin:16px 0; }
+  .box p:last-child, .box ul:last-child { margin-bottom:0; }
   footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
+  @media (max-width:520px) { h1 { font-size:28px; } header nav a { margin-left:12px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <strong>AQuietDesk</strong>
-    <a href="/schedu">Schedu home</a>
+    <strong><a href="/">AQuietDesk</a></strong>
+    <nav><a href="/schedu/">Schedu</a><a href="/schedu/terms/">Terms</a></nav>
   </header>
 
   <h1>Schedu Privacy Policy</h1>
   <p class="meta">Effective November 7, 2026 · Applies to the Schedu desktop app and Schedu Pro, made by AQuietDesk (“we”, “us”).</p>
 
-  <p>Schedu is a Windows planner for classes, tasks and calendars. Everything stays on your PC unless you turn on a feature that needs to go online, and AQuietDesk never receives your planner data.</p>
+  <p>Schedu is a Windows planner for classes, tasks and calendars. Your planner stays on your PC. Schedu only goes online for features you turn on, and AQuietDesk never receives your planner data or your Google data. We have no server that stores it.</p>
 
-  <h2>1. What stays on your PC</h2>
-  <p>Your tasks, classes, grades, notes, focus sessions and settings are saved in a database on your computer, in <code>%APPDATA%\app.schedu.desktop</code>. We have no server that stores or receives this data, and Schedu has no accounts, analytics, advertising or tracking.</p>
+  <h2>1. Data Schedu handles</h2>
+  <ul>
+    <li><strong>Planner data:</strong> the tasks, classes, grades, notes, quick notes, focus sessions and settings you enter.</li>
+    <li><strong>Google data (only if you connect Google):</strong> the Google Calendar and Google Tasks data described in section 3, and the sign-in tokens Google issues to Schedu.</li>
+    <li><strong>Schedu Pro data (only if you use Pro):</strong> your licence key, your Anthropic API key, and the syllabus files you choose to import.</li>
+  </ul>
+  <p>Schedu has no accounts, analytics, advertising or tracking. It doesn’t ask Google for your email address or profile.</p>
 
-  <h2>2. What leaves your PC, and only when you turn it on</h2>
-  <div class="scroll">
-  <table>
-    <tr><th>Feature</th><th>What is sent</th><th>Where</th></tr>
-    <tr><td>Google Calendar and Tasks sync (optional)</td><td>The tasks you sync (title, dates, times, notes) are written to your own Google Calendar and Google Tasks, and your calendars, events and tasks are read back</td><td>Google, using your Google account</td></tr>
-    <tr><td>Backups (optional)</td><td>A full copy of your Schedu database, without your Google sign-in</td><td>The folder you choose. If that folder is synced by Google Drive, OneDrive or Dropbox, that service stores the copy under its own terms</td></tr>
-    <tr><td>Weather (optional)</td><td>The city name you type in Settings</td><td>Open-Meteo (open-meteo.com)</td></tr>
-    <tr><td>Update check (automatic)</td><td>A request asking whether a newer version exists. It carries no data from the app</td><td>GitHub, where Schedu releases are hosted</td></tr>
-    <tr><td>Schedu Pro licence (Pro only)</td><td>Your licence key, a salted fingerprint of your PC (not the raw Windows ID), your computer’s name and the app version, on activation and about once a week after</td><td>Polar (polar.sh), which issued the key</td></tr>
-    <tr><td>Schedu Pro syllabus import (Pro only, each time you import)</td><td>The syllabus file you choose, plus the class name, its term, today’s date and its grade category names</td><td>Anthropic (anthropic.com), using your own Anthropic API key</td></tr>
-  </table>
-  </div>
-  <p>Any service Schedu contacts can see your computer’s IP address, as with any internet request.</p>
+  <h2>2. Where it’s stored</h2>
+  <ul>
+    <li><strong>Planner data</strong> is saved in a database on your computer, in <code>%APPDATA%\app.schedu.desktop</code>.</li>
+    <li><strong>Google sign-in tokens, your licence key and your Anthropic API key</strong> are saved only on your PC, in Windows Credential Manager, set so they never roam to other computers. They’re not in Schedu’s database, so they’re never in backups.</li>
+    <li><strong>Backups</strong> (optional) are copies of the database written to a folder you choose. If that folder is synced by Google Drive, OneDrive or Dropbox, that service stores the copy under its own terms.</li>
+  </ul>
 
   <h2>3. Google user data</h2>
-  <p>When you connect a Google account, Schedu asks Google for permission to:</p>
-  <ul>
-    <li><strong>See your calendars and their events</strong> (<code>calendar.readonly</code>), so they can appear in Schedu’s Today and Calendar views.</li>
-    <li><strong>See, create, change and delete events</strong> (<code>calendar.events</code>), to keep Google Calendar events in step with the items you create or change in Schedu.</li>
-    <li><strong>See, create, change and delete your task lists and tasks</strong> (<code>tasks</code>), to show your Google Tasks in Schedu and keep them in step with your Schedu tasks.</li>
-  </ul>
-  <p>Schedu uses this access only to show your Google events and tasks inside Schedu and to keep them in step with your Schedu tasks. Events and tasks Schedu syncs are saved in its local database so they can be shown offline. The sign-in token Google issues is stored only on your PC. It’s never included in backups and never sent to AQuietDesk or anyone else. Google data is never sent to Anthropic, including during Schedu Pro syllabus import.</p>
+  <p>Connecting Google is optional. If you connect, you sign in on Google’s own page in your browser, and Schedu asks for three permissions. Here is what each one is used for:</p>
+  <div class="scroll">
+  <table>
+    <tr><th>Permission</th><th>What Schedu does with it</th></tr>
+    <tr><td><strong>Google Tasks</strong><br><code>tasks</code></td><td>When sync is on, Schedu creates a task in your default Google Tasks list for each Schedu item, updates it when you change the item, and deletes it when you delete the item. It checks that list for changes you make in Google to those same tasks (title, notes, done, deleted) and applies them in Schedu. Your other Google Tasks are ignored: Schedu doesn’t import, show or change them.</td></tr>
+    <tr><td><strong>See your calendars and events</strong><br><code>calendar.readonly</code></td><td>Schedu lists your calendars so you can choose which ones to show, and reads their events to display them in its Today and Calendar views. Events are read when the view is shown. Schedu doesn’t save or change them.</td></tr>
+    <tr><td><strong>Edit events</strong><br><code>calendar.events</code></td><td>Some Schedu items are linked to an event in your primary calendar (created by an earlier version of Schedu). For those items only, Schedu updates the event when you change the item, deletes it when you delete the item, and applies changes you make to that event in Google. Schedu doesn’t create new events, and doesn’t change any other event.</td></tr>
+  </table>
+  </div>
+  <p><strong>What Schedu keeps:</strong> for each synced item, the ID of its Google task or event, and any edits you made in Google that were applied to the item. These are saved with the item in the local database. Events from your calendars that Schedu only displays aren’t saved.</p>
+  <p><strong>Where Google data goes:</strong> only between your PC and Google, over HTTPS. It’s never sent to AQuietDesk. <strong>Google user data is never sent to Anthropic or any AI service</strong>, including during Schedu Pro syllabus import.</p>
+
   <div class="box">
     <p>Schedu’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
   </div>
   <p>In particular, Google user data:</p>
   <ul>
-    <li>is used only to provide Schedu’s user-facing calendar and task features;</li>
-    <li>is not transferred to anyone else, except as needed to provide those features, to comply with law, or as part of a merger or acquisition with notice to you;</li>
-    <li>is not used or transferred for advertising, including retargeting, personalized or interest-based ads;</li>
-    <li>is not sold, and is not used to determine credit-worthiness or for lending;</li>
-    <li>is not read by any person, unless you give explicit permission (for example, sending a screenshot for support), it’s needed for security, or the law requires it;</li>
+    <li>is used only to provide Schedu’s user-facing calendar and task features described above;</li>
+    <li>is not transferred to anyone else, except as needed to provide or improve those features, to comply with applicable law, or as part of a merger, acquisition or sale of assets with notice to you;</li>
+    <li>is not used or transferred for serving advertisements, including retargeting, personalized or interest-based ads;</li>
+    <li>is not sold;</li>
+    <li>is not read by any person, unless you give explicit permission (for example, sending a screenshot for support), it’s needed for security purposes such as investigating abuse, or the law requires it;</li>
+    <li>is not used or transferred to determine credit-worthiness or for lending purposes;</li>
     <li>is not used to develop, improve or train generalized or non-personalized AI or machine-learning models.</li>
   </ul>
-  <p>To stop sharing, choose <strong>Settings → Google → Disconnect</strong>, which deletes Schedu’s stored Google sign-in from your PC, and remove Schedu at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> to revoke its access on Google’s side. Events and tasks already synced stay in Schedu, and in your Google account, until you delete them.</p>
 
-  <h2>4. Schedu Pro</h2>
-  <div class="box">
-    <p><strong>Everything Schedu Pro saves is stored only on your own computer:</strong> your Anthropic API key, your licence key, the rows read from a syllabus and the items you import. None of it is stored by AQuietDesk or anywhere else by Schedu, and AQuietDesk has no server that could receive it.</p>
+  <h3>Disconnecting Google</h3>
+  <p>Choose <strong>Settings → Google → Disconnect</strong> in Schedu. That revokes Schedu’s access at Google and deletes the Google tokens from your PC. You can also remove Schedu at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After you disconnect, items you synced stay in Schedu until you delete them (or delete the app’s data folder, below), and tasks or events Schedu created in your Google account stay there until you delete them in Google.</p>
+
+  <h2>4. Every service Schedu contacts</h2>
+  <p>Schedu contacts these services only for the feature listed. Any service can see your computer’s IP address, as with any internet request.</p>
+  <div class="scroll">
+  <table>
+    <tr><th>Service</th><th>When</th><th>What is sent</th></tr>
+    <tr><td><strong>Google</strong> (<a href="https://policies.google.com/privacy">privacy policy</a>)</td><td>Google sync, if you connect</td><td>The sign-in, and the items you sync (title, dates, times, notes), as described in section 3</td></tr>
+    <tr><td><strong>Open-Meteo</strong> (<a href="https://open-meteo.com/en/terms">terms</a>)</td><td>Weather, if you set a city</td><td>The city name you type in Settings, then its latitude and longitude, to get the forecast</td></tr>
+    <tr><td><strong>GitHub</strong> (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>)</td><td>Automatic update check, and downloading updates</td><td>A request asking whether a newer version exists. It carries no data from the app</td></tr>
+    <tr><td><strong>Polar</strong> (<a href="https://polar.sh/legal/privacy">privacy policy</a>)</td><td>Schedu Pro: on activation and about once a week after</td><td>Your licence key, a salted, hashed fingerprint of your PC (not the raw Windows ID), your computer’s name, the app version and the operating system, so Polar can limit how many computers a key unlocks</td></tr>
+    <tr><td><strong>Anthropic</strong> (<a href="https://www.anthropic.com/legal/privacy">privacy policy</a>)</td><td>Schedu Pro: each time you import a syllabus (pressing Test on your key sends only the key)</td><td>The syllabus file you choose, plus the class name, its term, today’s date and its grade category names, signed with <strong>your own</strong> Anthropic API key. No Google data</td></tr>
+  </table>
   </div>
+
+  <h2>5. Schedu Pro syllabus import</h2>
+  <p>The syllabus file goes from your PC straight to Anthropic’s API under your own Anthropic account, and Anthropic handles it under its own terms. Schedu doesn’t keep a copy of the file. It keeps, on your PC, the rows it read until you review them, and the items you approve. Checking for items already in the class happens on your PC after Anthropic replies; those items are never sent. Your API key is sent only to Anthropic, to sign your own requests. AQuietDesk never receives it.</p>
+
+  <h2>6. Purchases</h2>
+  <p>Payments for Schedu and Schedu Pro are handled by <a href="https://polar.sh/legal/privacy">Polar</a>, the seller of record, which processes your payment and issues licence keys under its own privacy policy. We receive your email address and order details from Polar so we can give support and refunds. We never receive your card details.</p>
+
+  <h2>7. Sharing, sale and advertising</h2>
+  <p>We don’t sell your information, use it for advertising, or share it with anyone beyond the services in section 4, which receive only what is listed there. We don’t use your data, including Google data, to train AI models. We may disclose information if the law requires it.</p>
+
+  <h2>8. Security</h2>
+  <p>Everything Schedu sends travels over encrypted HTTPS connections. Data on your PC is protected by your Windows account, and secrets are kept in Windows Credential Manager rather than in the database.</p>
+
+  <h2>9. Retention and deleting your data</h2>
+  <p>Data on your PC stays until you delete it. We hold no copy of your planner or Google data, so there’s nothing for us to delete on our side.</p>
   <ul>
-    <li><strong>Your Anthropic API key</strong> is saved only on this PC, in Windows Credential Manager, set so it never syncs or roams to other computers. It isn’t in Schedu’s database, so it’s never in your backups. It’s sent only to Anthropic, to sign in your own requests (each import, and when you press Test), the same way a password is sent to log in. AQuietDesk never receives it.</li>
-    <li><strong>Syllabus files</strong> go from your PC straight to Anthropic’s API under your own Anthropic account, and Anthropic handles them under its own terms (<a href="https://www.anthropic.com/legal/privacy">Anthropic’s privacy policy</a>). Schedu doesn’t keep a copy of the file. It keeps, on your PC, the rows it read until you review them and the items you approve. Nothing from Google Calendar or Google Tasks is ever sent to Anthropic.</li>
-    <li><strong>Your licence key</strong> and its activation record are saved only on this PC, the same way as the API key. Polar, which issued the key, sees the details in the table above so it can limit how many computers a key unlocks. <strong>Settings → Schedu Pro → Remove from this PC</strong> deletes them from your PC and frees the slot.</li>
-    <li>Installing Pro downloads the Pro version from GitHub, like any update.</li>
+    <li><strong>Google:</strong> Settings → Google → Disconnect (see section 3), and optionally remove Schedu at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li><strong>Schedu Pro:</strong> Settings → Schedu Pro → Remove from this PC, and remove your API key on the same page. That deletes both from Windows Credential Manager.</li>
+    <li><strong>Everything else:</strong> uninstall Schedu from Windows <strong>Settings → Apps</strong> and tick <strong>Delete the application data</strong>, or delete the <code>%APPDATA%\app.schedu.desktop</code> folder. Delete any backup copies in the folder you chose.</li>
+    <li><strong>Order records</strong> are kept by Polar and by us as required for tax and accounting. Email us to have yours deleted, subject to those legal rules.</li>
   </ul>
 
-  <h2>5. Purchases</h2>
-  <p>If you pay for Schedu or subscribe to Schedu Pro, the purchase is handled by <a href="https://polar.sh/legal/privacy">Polar</a>, which acts as the seller of record and processes your payment under its own privacy policy. We receive your email address and order details from Polar so we can provide support and refunds. We never receive your card details.</p>
+  <h2>10. Children</h2>
+  <p>Schedu isn’t directed at children under 13, and we don’t knowingly collect information from them. If you believe a child has sent us information, email us and we’ll delete it.</p>
 
-  <h2>6. Sharing</h2>
-  <p>We don’t sell or share your information. The services above receive only what’s listed, and only when you use the feature: Google (sync), Open-Meteo (weather), GitHub (updates), Polar (purchases and Pro licences) and Anthropic (Pro import, on your own key). We may disclose information if the law requires it.</p>
+  <h2>11. Changes to this policy</h2>
+  <p>If this policy changes, the new version will be posted on this page with a new effective date. A change that sends any new data off your PC will also be listed in the app’s release notes before it ships.</p>
 
-  <h2>7. Security and retention</h2>
-  <p>Data on your PC is protected by your Windows account. Everything Schedu sends travels over encrypted HTTPS connections. Local data stays until you delete it. Order records are kept by Polar and by us as required for tax and accounting.</p>
-
-  <h2>8. Deleting your data</h2>
-  <ul>
-    <li>If you used Schedu Pro, first choose <strong>Settings → Schedu Pro → Remove from this PC</strong> and remove your API key on the same page. That deletes both from Windows Credential Manager.</li>
-    <li>Uninstall Schedu from <strong>Settings → Apps</strong> in Windows and tick <strong>Delete the application data</strong>, or delete the <code>%APPDATA%\app.schedu.desktop</code> folder yourself. Delete any backup copies in the folder you chose.</li>
-    <li>To have your order records deleted, email us, subject to legal retention rules.</li>
-  </ul>
-
-  <h2>9. Children</h2>
-  <p>Schedu isn’t directed at children under 13, and we don’t knowingly collect information from them.</p>
-
-  <h2>10. Changes</h2>
-  <p>If this policy changes, the new version will be posted here with a new date. A change that sends any new data off your PC will also be listed in the release notes.</p>
-
-  <h2>11. Contact</h2>
+  <h2>12. Contact</h2>
   <p>AQuietDesk · <a href="mailto:discover@aquietdesk.com">discover@aquietdesk.com</a></p>
 
-  <footer>© 2026 AQuietDesk · <a href="/schedu">Schedu</a> · <a href="/schedu/terms/">Terms</a></footer>
+  <footer>© 2026 AQuietDesk · <a href="/schedu/">Schedu</a> · <a href="/privacy/">Privacy policy</a> · <a href="/schedu/terms/">Terms</a> · <a href="mailto:discover@aquietdesk.com">Contact</a></footer>
 </div>
 </body>
 </html>
