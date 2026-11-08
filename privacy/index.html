@@ -60,16 +60,15 @@
   </ul>
 
   <h2>3. Google user data</h2>
-  <p>Connecting Google is optional. If you connect, you sign in on Google’s own page in your browser, and Schedu asks for three permissions. Here is what each one is used for:</p>
+  <p>Connecting Google is optional. If you connect, you sign in on Google’s own page in your browser, and Schedu asks for two permissions. Here is what each one is used for:</p>
   <div class="scroll">
   <table>
     <tr><th>Permission</th><th>What Schedu does with it</th></tr>
     <tr><td><strong>Google Tasks</strong><br><code>tasks</code></td><td>When sync is on, Schedu creates a task in your default Google Tasks list for each Schedu item, updates it when you change the item, and deletes it when you delete the item. It checks that list for changes you make in Google to those same tasks (title, notes, done, deleted) and applies them in Schedu. Your other Google Tasks are ignored: Schedu doesn’t import, show or change them.</td></tr>
-    <tr><td><strong>See your calendars and events</strong><br><code>calendar.readonly</code></td><td>Schedu lists your calendars so you can choose which ones to show, and reads their events to display them in its Today and Calendar views. Events are read when the view is shown. Schedu doesn’t save or change them.</td></tr>
-    <tr><td><strong>Edit events</strong><br><code>calendar.events</code></td><td>Some Schedu items are linked to an event in your primary calendar (created by an earlier version of Schedu). For those items only, Schedu updates the event when you change the item, deletes it when you delete the item, and applies changes you make to that event in Google. Schedu doesn’t create new events, and doesn’t change any other event.</td></tr>
+    <tr><td><strong>See your calendars and events</strong><br><code>calendar.readonly</code></td><td>Schedu lists your calendars so you can choose which ones to show, and reads their events to display them in its Today and Calendar views. Events are read when the view is shown. Schedu doesn’t save, create or change any calendar event.</td></tr>
   </table>
   </div>
-  <p><strong>What Schedu keeps:</strong> for each synced item, the ID of its Google task or event, and any edits you made in Google that were applied to the item. These are saved with the item in the local database. Events from your calendars that Schedu only displays aren’t saved.</p>
+  <p><strong>What Schedu keeps:</strong> for each synced item, the ID of its Google task, and any edits you made to that task in Google that were applied to the item. These are saved with the item in the local database. Calendar events are only displayed and never saved.</p>
   <p><strong>Where Google data goes:</strong> only between your PC and Google, over HTTPS. It’s never sent to AQuietDesk. <strong>Google user data is never sent to Anthropic or any AI service</strong>, including during Schedu Pro syllabus import.</p>
 
   <div class="box">
@@ -87,14 +86,14 @@
   </ul>
 
   <h3>Disconnecting Google</h3>
-  <p>Choose <strong>Settings → Google → Disconnect</strong> in Schedu. That revokes Schedu’s access at Google and deletes the Google tokens from your PC. You can also remove Schedu at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After you disconnect, items you synced stay in Schedu until you delete them (or delete the app’s data folder, below), and tasks or events Schedu created in your Google account stay there until you delete them in Google.</p>
+  <p>Choose <strong>Settings → Google → Disconnect</strong> in Schedu. That revokes Schedu’s access at Google and deletes the Google tokens from your PC. You can also remove Schedu at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. After you disconnect, items you synced stay in Schedu until you delete them (or delete the app’s data folder, below), and tasks Schedu created in your Google account stay there until you delete them in Google.</p>
 
   <h2>4. Every service Schedu contacts</h2>
   <p>Schedu contacts these services only for the feature listed. Any service can see your computer’s IP address, as with any internet request.</p>
   <div class="scroll">
   <table>
     <tr><th>Service</th><th>When</th><th>What is sent</th></tr>
-    <tr><td><strong>Google</strong> (<a href="https://policies.google.com/privacy">privacy policy</a>)</td><td>Google sync, if you connect</td><td>The sign-in, and the items you sync (title, dates, times, notes), as described in section 3</td></tr>
+    <tr><td><strong>Google</strong> (<a href="https://policies.google.com/privacy">privacy policy</a>)</td><td>Google sync, if you connect</td><td>The sign-in, and the items you sync to Google Tasks (title, due date, notes, done), as described in section 3</td></tr>
     <tr><td><strong>Open-Meteo</strong> (<a href="https://open-meteo.com/en/terms">terms</a>)</td><td>Weather, if you set a city</td><td>The city name you type in Settings, then its latitude and longitude, to get the forecast</td></tr>
     <tr><td><strong>GitHub</strong> (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>)</td><td>Automatic update check, and downloading updates</td><td>A request asking whether a newer version exists. It carries no data from the app</td></tr>
     <tr><td><strong>Polar</strong> (<a href="https://polar.sh/legal/privacy">privacy policy</a>)</td><td>Schedu Pro: on activation and about once a week after</td><td>Your licence key, a salted, hashed fingerprint of your PC (not the raw Windows ID), your computer’s name, the app version and the operating system, so Polar can limit how many computers a key unlocks</td></tr>
