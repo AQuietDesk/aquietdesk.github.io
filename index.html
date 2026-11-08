@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AQuietDesk</title>
-<meta name="description" content="AQuietDesk makes calm, simple desktop tools for planning your days. Home of Schedu, the desktop planner.">
+<meta name="description" content="AQuietDesk makes calm Windows apps that keep your data on your own computer: Schedu, a planner for students, and Money Plan OS, a private money planner for Canadians.">
 <link rel="canonical" href="https://aquietdesk.com/">
 <style>
   :root { --bg:#f7f6f2; --card:#fff; --ink:#1d1f1c; --muted:#5d625b; --line:#e3e1da; --accent:#2f5d46; }
@@ -12,33 +12,72 @@
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
   .wrap { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
   header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom:48px; }
+  header nav a { margin-left:16px; font-size:15px; }
   a { color:var(--accent); }
   h1 { font-size:40px; line-height:1.15; margin:0 0 12px; letter-spacing:-0.02em; }
-  .lede { font-size:19px; color:var(--muted); margin:0 0 32px; }
-  .card { display:block; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px; color:inherit; text-decoration:none; }
-  .card:hover { border-color:var(--accent); }
-  .card h2 { margin:0 0 6px; font-size:20px; color:var(--accent); }
-  .card p { margin:0; color:var(--muted); }
+  h2 { font-size:22px; margin:48px 0 16px; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 36px; }
+  .products { display:grid; gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:22px; }
+  .card h3 { margin:0 0 4px; font-size:21px; }
+  .card .price { margin:0 0 10px; font-size:14px; color:var(--muted); }
+  .card p { margin:0 0 12px; }
+  .card ul { margin:0 0 16px; padding-left:20px; color:var(--muted); }
+  .card .links a { margin-right:18px; font-weight:600; }
+  .principles { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; }
+  .principles div { border-top:2px solid var(--accent); padding-top:10px; }
+  .principles h3 { margin:0 0 4px; font-size:16px; }
+  .principles p { margin:0; color:var(--muted); font-size:15px; }
   footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
-  @media (max-width:520px) { h1 { font-size:32px; } }
+  @media (max-width:520px) { h1 { font-size:32px; } header nav a { margin-left:12px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <strong>AQuietDesk</strong>
-    <a href="/privacy/">Privacy policy</a>
+    <nav><a href="/schedu/">Schedu</a><a href="/money-plan-os/">Money Plan OS</a></nav>
   </header>
 
-  <h1>Calm tools for planning your days.</h1>
-  <p class="lede">AQuietDesk is a small independent studio making simple desktop apps that keep your data on your own computer.</p>
+  <h1>Calm desktop apps for your days and your money.</h1>
+  <p class="lede">AQuietDesk is a small independent studio making simple Windows apps. They keep your data on your own computer, work without an account, and don’t show ads.</p>
 
-  <a class="card" href="/schedu/">
-    <h2>Schedu</h2>
-    <p>A calm desktop planner for classes, tasks and your calendar, with optional Google Calendar and Google Tasks sync.</p>
-  </a>
+  <div class="products">
+    <div class="card">
+      <h3>Schedu</h3>
+      <p class="price">Free · pay what you want</p>
+      <p>A calm planner for students. Your classes, grades, tasks and calendar in one place, so you always know what today needs from you.</p>
+      <ul>
+        <li>Today view, class pages with weighted grades, week and month calendar</li>
+        <li>Quick add, focus timer and automatic backups</li>
+        <li>Optional Google Calendar and Google Tasks sync</li>
+      </ul>
+      <p class="links"><a href="/schedu/">About Schedu</a><a href="/schedu/get/">Get Schedu</a></p>
+    </div>
+    <div class="card">
+      <h3>Money Plan OS</h3>
+      <p class="price">$39 CAD, one-time</p>
+      <p>A private money planner for Canadians. Set goals, map your cash flow and plan your TFSA, RRSP and FHSA room, all saved only on your computer.</p>
+      <ul>
+        <li>Goals, cash flow, investments and risk protection</li>
+        <li>Contribution room for TFSA, RRSP and FHSA, with the 2027 limits</li>
+        <li>A yearly review to check your plan</li>
+      </ul>
+      <p class="links"><a href="/money-plan-os/">About Money Plan OS</a><a href="/buy/">Buy Money Plan OS</a></p>
+    </div>
+  </div>
 
-  <footer>© 2026 AQuietDesk · <a href="/schedu/">Schedu</a> · <a href="/privacy/">Privacy policy</a> · <a href="/schedu/terms/">Terms</a> · <a href="mailto:discover@aquietdesk.com">discover@aquietdesk.com</a></footer>
+  <h2>How we build</h2>
+  <div class="principles">
+    <div><h3>Your data stays yours</h3><p>Everything you enter is saved on your own PC. AQuietDesk never receives it.</p></div>
+    <div><h3>No account needed</h3><p>Install and start. Paid apps use a licence key, not a login.</p></div>
+    <div><h3>Fair refunds</h3><p>Schedu and Money Plan OS come with a 30-day refund, no reason needed.</p></div>
+  </div>
+
+  <h2>Buying and support</h2>
+  <p>Payments are handled by <a href="https://polar.sh">Polar</a>, the seller of record. Your licence key and downloads are in your Polar <a href="/portal/">purchases page</a>. For help, email <a href="mailto:discover@aquietdesk.com">discover@aquietdesk.com</a>; expect a reply within 3 business days.</p>
+
+  <footer>© 2026 AQuietDesk · <a href="/schedu/">Schedu</a> · <a href="/schedu/terms/">Schedu terms</a> · <a href="/money-plan-os/">Money Plan OS</a> · <a href="/money-plan-os/terms/">Money Plan OS terms</a> · <a href="/privacy/">Privacy policy</a> · <a href="mailto:discover@aquietdesk.com">discover@aquietdesk.com</a></footer>
 </div>
 </body>
 </html>
